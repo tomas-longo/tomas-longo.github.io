@@ -94,7 +94,6 @@ body {
     font-weight: 400;
     line-height: var(--line-height-normal);
     background: var(--black);
-    overflow-x: hidden;
 }
 
 .row {
@@ -110,7 +109,6 @@ body {
 .content {
     background: var(--white);
     scroll-behavior: smooth;
-    overflow: auto;
     scroll-snap-type: y mandatory;
 }
 
@@ -207,7 +205,6 @@ a:focus {
     right: 100%;
     background: var(--black);
     height: 100%;
-    z-index: -1;
     transition: all 0.2s cubic-bezier(1, 0.68, 0.16, 0.9);
 }
 
@@ -223,7 +220,7 @@ a:focus {
     padding: 0.5rem 2rem;
     text-decoration: none;
     font-family: 'Sqeron', sans-serif;
-    transition: all 0.2s;
+    transition: all 0.4s;
     cursor: pointer;
     background: var(--orange);
 }
@@ -252,7 +249,6 @@ a:focus {
     right: 100%;
     background: var(--white);
     height: 100%;
-    z-index: -1;
     transition: all 0.2s cubic-bezier(1, 0.68, 0.16, 0.9);
 }
 
@@ -407,6 +403,7 @@ a:focus {
     background-color: var(--black);
     position: sticky;
     top: 0;
+    z-index: 1;
 }
 .ProjectTitle::before{
     content: '';
@@ -484,7 +481,7 @@ a:focus {
     background-color: var(--orange);
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
 }
 
@@ -512,9 +509,26 @@ a:focus {
  .ProjectPosition {
      padding: 5px;
  }
- 
- 
 
+
+
+.game_link_btn {
+    display: flex;
+    flex-flow: row;
+    justify-content: flex-end;
+    margin-bottom: 5px;
+}
+
+.game_link_icon {
+    width: 35px;
+    height: 35px;
+    margin-top: -5px;
+    margin-bottom: -10px;
+}
+
+.game_link {
+    border: var(--border1);
+}
 
 /* --------------------------------------- */
 /* ----- Contact ----- */
